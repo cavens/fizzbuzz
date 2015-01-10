@@ -1,0 +1,42 @@
+#This shizzle can definitely use a class, but its too late to do that research :)
+#Should also make a structured list of test cases to make sure everything is covered
+
+
+import sys
+
+#Check if there's a command line argument
+if (len(sys.argv) > 1) and type (sys.argv[1]) is int:
+#If there is a CL argument and it is an int, execute fizzbuzz algorithm
+    for n in range (1,int(sys.argv[1])+1):
+      if (n%3==0) and (n%5==0):
+        print "fizzbuzz"
+      elif (n%3==0):
+        print "fizz"
+      elif (n%5==0):
+        print "buzz"
+      else:
+        print n
+
+#If there's no CL argument, user is promted to enter a value
+else:
+
+  #Check if value is an integer  
+    parsed = False
+    while not parsed:
+      try:
+        my_input = int(raw_input("Enter something yo..."))
+        parsed = True
+      except ValueError:
+        print "Value has to be an integer"  
+
+#Excecute fizzbuzz algorithm
+    for n in range (1,int(my_input)+1):
+      if (n%3==0) and (n%5==0):
+        print "fizzbuzz"
+      elif (n%3==0):
+        print "fizz"
+      elif (n%5==0):
+        print "buzz"
+      else:
+        print n
+    
